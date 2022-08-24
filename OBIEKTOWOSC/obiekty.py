@@ -62,3 +62,16 @@ pr = Pracownik("Olga",32,54,167,"ABC","dyrektor",5,10900)
 pr.print_osoba()
 pr.print_pracownik()
 print(pr.wiekza10lat())
+
+
+class Sport:
+    
+    def __init__(self,dyscyplina,lata_upr, best_wynik):
+        self.dyscyplina = dyscyplina
+        self.lata_upr = lata_upr
+        self.best_wynik = best_wynik
+        
+    def info_sport(self):
+        print(f"dysycyplina: {self.dyscyplina}, lata uprawiania: {self.lata_upr}, życiówka: {self.best_wynik}")
+        
+        
