@@ -35,6 +35,37 @@ print("******************************************")
 os2 = Osoba("Olga",42,77,174)
 os2.print_osoba()
 
+
+class Ekstra:
+    pass
+
+class Student(Pracownik,Sport,Ekstra):
+
+    def __init__(self,imie,wiek,waga,wzrost,id_studenta,kierunek,rok_studiow,
+                 firma="",stanowisko="",latapr="",wynagrodzenie="",dyscyplina="",lata_upr="", best_wynik=""):
+        Pracownik.__init__(self,imie,wiek,waga,wzrost,firma,stanowisko,latapr,wynagrodzenie)
+        Sport.__init__(self,dyscyplina,lata_upr, best_wynik)
+        self.id_studenta = id_studenta
+        self.kierunek = kierunek
+        self.rok_studiow = rok_studiow
+
+    def print_student(self):
+        print(f"student: {self.id_studenta}, kierunek: {self.kierunek}, rok studiów: {self.rok_studiow}")
+
+    def czypracownik(self):
+        return self.firma != ""
+
+
+print("******************************************")
+st1 = Student("Olga",22,58,173,432423,"informatyka",3,"ABC","junior",1,3300)
+st1.print_osoba()
+st1.print_pracownik()
+st1.print_student()
+
+print(st1.wiekza10lat())
+
+print(f"czy ososba jest pracownikiem? {st1.czypracownik()}")
+
 print(os2.wiekza10lat())
 
 print(f"czy ososba jest pracownikiem? {os2.czypracownik()}")
