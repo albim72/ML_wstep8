@@ -105,4 +105,13 @@ class Sport:
     def info_sport(self):
         print(f"dysycyplina: {self.dyscyplina}, lata uprawiania: {self.lata_upr}, życiówka: {self.best_wynik}")
         
-        
+    print("******************************************")
+st2 = Student("Olga",22,58,173,432423,"informatyka",3,dyscyplina="biegi ultra",lata_upr=5,
+              best_wynik="102km 19h 12min 23s")
+st2.print_osoba()
+st2.print_student()
+st2.info_sport()
+
+print(st2.wiekza10lat())
+
+print(f"czy ososba jest pracownikiem? {st2.czypracownik()}")
